@@ -1,27 +1,33 @@
 import java.util.ArrayList;
 /**
- * Write a description of class Post here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * This class stores information about a news feed post in a 
+ * social network. Posts can be stored and displayed. This class
+ * serves as a superclass for more specific post types.
  */
+
 public class Post
 {
-    private String username;
-    private long timestamp;
-    private int likes;
+
+	private String username;		
+	private long timestamp;
+	private int likes;
 	private ArrayList<String> comments;
 
+ 
     /**
-     * Constructor for objects of class Post
+     * Constructor for objects of class Post.
+     * 
+     * @param author    The username of the author of this post.
      */
-    public Post(String username)
-    {
+	public Post(String username){
 		this.username = username;
 		timestamp = System.currentTimeMillis();
 		likes = 0;
-		comments = new ArrayList<>();	
-    }
+		comments = new ArrayList<>();
+	}
+
+
+
 
     /**
      * Record one more 'Like' indication from a user.
@@ -36,7 +42,7 @@ public class Post
      */
     public void unlike()
     {
-    	if (likes > 0){
+    	if (likes>0){
     		likes--;
     	}  	
     }	
@@ -50,7 +56,18 @@ public class Post
     {
 		comments.add(text);
     }
-    
+
+
+    /**
+     * Return the time of creation of this post.
+     * 
+     * @return The post's creation time, as a system time value.
+     */
+    public long getTimeStamp()
+    {	
+    	return timestamp;
+    }
+	
     /**
      * Display the details of this post.
      * 
@@ -60,8 +77,10 @@ public class Post
     public void display()
     {	
 		System.out.println("Usuario: "+ username);
-		System.out.println(timeString(timestamp));		
-		System.out.println(likes + " me gusta");		
+		System.out.println(timeString(timestamp));
+		
+		System.out.println(likes + " me gusta");
+		
 		if(comments.isEmpty()) {
 			System.out.println("No hay comentarios");		
 		}
@@ -71,6 +90,8 @@ public class Post
 				System.out.println(comment);
 			}
 		}
+		
+
 	}
 	
     /**
