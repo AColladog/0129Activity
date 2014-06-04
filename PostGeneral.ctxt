@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=username
+comment0.target=PostGeneral(java.lang.String)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Post.\r\n\ \r\n\ @param\ author\ \ \ \ The\ username\ of\ the\ author\ of\ this\ post.\r\n
+comment1.params=
+comment1.target=long\ getTimeStamp()
+comment2.params=time
+comment2.target=java.lang.String\ timeString(long)
+comment3.params=
+comment3.target=void\ display()
+numComments=4

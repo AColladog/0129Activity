@@ -35,3 +35,4 @@ public class MessagePost extends Post
 
 	
 }
+ 
