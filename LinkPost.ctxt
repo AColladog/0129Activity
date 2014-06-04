@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=username\ message\ url
+comment0.target=LinkPost(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.params=
+comment1.target=java.lang.String\ getUrl()
+numComments=2

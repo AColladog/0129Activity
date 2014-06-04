@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class NewsFeed
  {
- 	private ArrayList<Post> posts;
+ 	private ArrayList<PostGeneral> posts;
  	
 
 
@@ -31,7 +31,7 @@ public class NewsFeed
      * 
      * @param post  The post to be added.
      */
-    public void addPost(Post post)
+    public void addPost(PostGeneral post)
     {
     	posts.add(post);
     }
@@ -47,7 +47,7 @@ public class NewsFeed
      */
     public void show()  
     {
-		for(Post post: posts){
+		for(PostGeneral post: posts){
 		  post.display();
 		  System.out.println();
 		}
