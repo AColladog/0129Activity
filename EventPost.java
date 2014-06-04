@@ -1,4 +1,4 @@
-public class EventPost extends Post
+public class EventPost extends PostGeneral
 {
 	private Event tipoEvento;
 
